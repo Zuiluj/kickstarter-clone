@@ -1,5 +1,6 @@
 node_modules
 .env
+.env.local
 
 ### VisualStudioCode ###
 .vscode/*
@@ -12,3 +13,5 @@ node_modules
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 **/.history
+
+.next
