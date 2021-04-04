@@ -8,7 +8,7 @@ if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
 } else {
     // we are onthe server *or* the user is not running metamsak
     const provider = new Web3.providers.HttpProvider(
-        'https://rinkeby.infura.io/v3/94eed819701a417c8eaa762ce65d632e'
+        process.env.INFURIA_RINKEBY
     );
     web3 = new Web3(provider);
 }
