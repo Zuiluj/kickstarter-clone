@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Form, Button, Input, Message } from 'semantic-ui-react';
+import { Router } from '../../routes';
 
 import Layout from '../../components/Layout';
 import factory from '../../ethereum/factory';
@@ -23,6 +24,8 @@ const CampaignNew = () => {
             await factory.methods.createCampaign(minimumContribution).send({
                 from: accounts[0],
             });
+
+            Router.pushRoute('/');
         } catch (err) {
             setErrMsg(err.message);
         }
